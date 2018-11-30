@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'PagesController@home');
+Route::get('/faq', 'PagesController@Faq');
