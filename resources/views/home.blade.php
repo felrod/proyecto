@@ -1,6 +1,6 @@
 @extends('template.base')
 
-@section('title',DH-Ecommerce Home)
+@section('title')
 @endsection
 
 @section('content')
