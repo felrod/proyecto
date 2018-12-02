@@ -43,17 +43,17 @@ class PagesController extends Controller
     }
 
     public function termsConditions(){
-      return view('termsConditions');
+      return view('terms&conditions');
     }
 
     public function faq(){
-      return view('faq');
+      return view('Faq');
     }
 
     public function signSuccess(){
       return view('signSuccess');
     }
-
+    
     public function login(){
       return view('login');
     }
