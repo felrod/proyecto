@@ -62,7 +62,7 @@
 <div class="col-md-2">
   <div class="img-thumbnail">
     <a href="details.php" target="_blank">
-      <img src="images/abanico_liliana.jpg" alt="Avanico Liliana" style="width:100%" align=center>
+      <img src="images/product/abanico_liliana.jpg" alt="Avanico Liliana" style="width:100%" align=center>
       <div class="caption">
         <h3 class=precio align=center>$ 1.200</h3>
         <h6 class=descripcion align=center>Turbo Ventilador Liliana VOTR18</h6>
@@ -74,7 +74,7 @@
 <div class="col-md-2">
   <div class="img-thumbnail">
     <a href="/w3images/nature.jpg" target="_blank">
-      <img src="images/tv.jpg" alt="Nature" style="width:100%" align=center>
+      <img src="images/product/tv.jpg" alt="Nature" style="width:100%" align=center>
       <div class="caption">
         <h3 class=precio align=center>$ 14.000</h3>
         <h6 class=descripcion align=center>TV LED Philips 32 " HD 32PHG5101/77</h6>
@@ -87,7 +87,7 @@
 <div class="col-md-2">
   <div class="img-thumbnail">
     <a href="/w3images/fjords.jpg" target="_blank">
-      <img src="images/cafetera_oster.jpg" alt="Fjords" style="width:100%" align=center>
+      <img src="images/product/cafetera_oster.jpg" alt="Fjords" style="width:100%" align=center>
       <div class="caption">
         <h3 class=precio align=center>$ 11.000</h3>
         <h6 class=descripcion align=center>Cafetera Oster BVSTECMP55-054</h6>
@@ -103,7 +103,7 @@
 <div class="col-md-2">
   <div class="img-thumbnail">
     <a href="details.php" target="_blank">
-      <img src="images/camara.jpg" alt="Camara Digital" style="width:100%" align=center>
+      <img src="images/product/camara.jpg" alt="Camara Digital" style="width:100%" align=center>
       <div class="caption">
         <h3 class=precio align=center>$ 1.200</h3>
         <h6 class=descripcion align=center>Cámara Digital Sony DSC-H300 E33 Negra</h6>
@@ -115,7 +115,7 @@
 <div class="col-md-2">
   <div class="img-thumbnail">
     <a href="/w3images/nature.jpg" target="_blank">
-      <img src="images/impresora.jpg" alt="Nature" style="width:100%" align=center>
+      <img src="images/product/impresora.jpg" alt="Nature" style="width:100%" align=center>
       <div class="caption">
         <h3 class=precio align=center>$ 11.000</h3>
         <h6 class=descripcion align=center>Impresora Multifunción Brother DCP-T500W</h6>
@@ -128,7 +128,7 @@
 <div class="col-md-2">
   <div class="img-thumbnail">
     <a href="/w3images/fjords.jpg" target="_blank">
-      <img src="images/microondas.jpg" alt="Microondas" style="width:100%" align=center>
+      <img src="images/product/microondas.jpg" alt="Microondas" style="width:100%" align=center>
       <div class="caption">
         <h3 class=precio align=center>$ 11.000</h3>
         <h6 class=descripcion align=center>Microondas Samsung 23 L MG23F3K3TAS Plata</h6>
