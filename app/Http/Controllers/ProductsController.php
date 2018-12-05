@@ -7,6 +7,10 @@ use App\Product;
 
 class ProductsController extends Controller
 {
-    public function products();
+    public function showProducts() {
+      $products = Product::all();
+      return view ('products.index')->with
+
+    }
 
 }
