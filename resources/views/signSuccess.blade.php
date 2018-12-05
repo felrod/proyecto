@@ -11,7 +11,6 @@
 // }
 ?>
 
-<body>
     <div class="col-md-12">
 
       <div class="mensajesuccess">
@@ -34,5 +33,4 @@
       </div>
 
     </div>
-</body>
 @endsection

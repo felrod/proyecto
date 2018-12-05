@@ -31,8 +31,6 @@
 //   setcookie ("password",$_POST["password"],time()+(10*365*24*60*60));
 // }
 ?>
-
-<body>
   <section class="container">
     <div class="row justify-content-center">
       <article class="col-md-5">
@@ -71,5 +69,4 @@
     </div>
   </section>
   <br>
-</body>
 @endsection

@@ -36,7 +36,6 @@
 // 	}
 // }
  ?>
- <body>
     <section class="container">
 			<div class="row justify-content-center">
 				<article class="col-md-5">
@@ -118,7 +117,4 @@
 			</div>
 		</section>
     <br>
-  </body>
-
-
 @endsection

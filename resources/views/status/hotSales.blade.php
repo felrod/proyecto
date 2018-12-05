@@ -10,9 +10,8 @@
 // $user = $db->traerPorMail($_SESSION["logueado"]);
 // }
 ?>
-<body>
+
   <br>
-  <h1>OFERTAS !!</h1>
+  <h1>HotSales!!</h1>
   <br><br><br>
-</body>
 @endsection
