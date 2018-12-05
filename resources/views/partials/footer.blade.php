@@ -1,11 +1,11 @@
 <footer>
   <div class="">
     <ul class="ul-icon">
-      <li class="icon"><a class="icon" href="https://www.facebook.com/"><img src="{{asset('images/icon-facebook.png')}}" alt="icon-fb"></a></li>
-      <li class="icon"><a class="icon" href="https://www.youtube.com/"><img src="{{asset('images/icon-youtube.png')}}" alt="icon-yt"></a></li>
-      <li class="icon"><a class="icon" href="https://www.instagram.com/"><img src="{{asset('images/icon-instagram.png')}}" alt="icon-ig"></a></li>
-      <li class="icon"><a class="icon" href="https://www.twitter.com/"><img src="{{asset('images/icon-twitter.png')}}" alt="icon-tw"></a></li>
-      <li class="icon"><a class="icon" href="https://www.amazon.com/"><img src="{{asset('images/icon-amazon.png')}}" alt="icon-am"></a></li>
+      <li class="icon"><a class="icon" href="https://www.facebook.com/"><img src="images/icon-facebook.png" alt="icon-fb"></a></li>
+      <li class="icon"><a class="icon" href="https://www.youtube.com/"><img src="images/icon-youtube.png" alt="icon-yt"></a></li>
+      <li class="icon"><a class="icon" href="https://www.instagram.com/"><img src="images/icon-instagram.png" alt="icon-ig"></a></li>
+      <li class="icon"><a class="icon" href="https://www.twitter.com/"><img src="images/icon-twitter.png" alt="icon-tw"></a></li>
+      <li class="icon"><a class="icon" href="https://www.amazon.com/"><img src="images/icon-amazon.png" alt="icon-am"></a></li>
     </ul>
 
     <ul class="mapa">
@@ -22,10 +22,10 @@
         <li><a href="#">Oficina</a></li>
       </div>
       <div class="">
-        <li><a href="{{asset('faq')}}">Preguntas frecuentes</a></li>
-        <li><a href="{{asset('contacts')}}">Contactos</a></li>
+        <li><a href="preguntas.php">Preguntas frecuentes</a></li>
+        <li><a href="contacts.php">Contactos</a></li>
         <li><a href="">Sucursales</a></li>
-        <li><a href="{{asset('aboutus')}}">Sobre nosotros</a></li>
+        <li><a href="aboutUs.php">Sobre nosotros</a></li>
       </div>
     </ul>
     <br>

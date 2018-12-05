@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Route::get('/home', 'PagesController@home');
@@ -31,7 +31,7 @@ Route::get('/news', 'PagesController@news');
 
 Route::get('/offers', 'PagesController@offers');
 
-Route::get('hotsales', 'PagesController@hotSales');
+Route::get('/hotsales', 'PagesController@hotSales');
 
 Route::get('/terms&conds', 'PagesController@termsConditions');
 
