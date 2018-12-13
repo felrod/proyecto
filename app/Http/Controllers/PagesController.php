@@ -31,15 +31,15 @@ class PagesController extends Controller
     }
 
     public function news(){
-      return view('news');
+      return view('status.news');
     }
 
     public function offers(){
-      return view('offers');
+      return view('status.offers');
     }
 
     public function hotSales(){
-      return view('hotSales');
+      return view('status/hotSales');
     }
 
     public function termsConditions(){
@@ -53,7 +53,7 @@ class PagesController extends Controller
     public function signSuccess(){
       return view('signSuccess');
     }
-    
+
     public function login(){
       return view('login');
     }

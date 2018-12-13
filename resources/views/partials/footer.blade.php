@@ -22,10 +22,10 @@
         <li><a href="#">Oficina</a></li>
       </div>
       <div class="">
-        <li><a href="preguntas.php">Preguntas frecuentes</a></li>
-        <li><a href="contacts.php">Contactos</a></li>
+        <li><a href="/faq">Preguntas frecuentes</a></li>
+        <li><a href="/contacts">Contactos</a></li>
         <li><a href="">Sucursales</a></li>
-        <li><a href="aboutUs.php">Sobre nosotros</a></li>
+        <li><a href="/aboutus">Sobre nosotros</a></li>
       </div>
     </ul>
     <br>
