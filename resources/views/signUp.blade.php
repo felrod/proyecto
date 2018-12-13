@@ -46,37 +46,42 @@
 
 						<br><br>
 
-						<form action="signup.php" method="POST" enctype="multipart/form-data">
+						<form action="signup.php" class="user-form" method="POST" enctype="multipart/form-data">
 
 						<div class="form-group">
-							<label for="">Nombre de usuario:</label>
+							<label for="username">Nombre de usuario:</label>
 							<input type="text" value="<?php // echo $usernameDefault?>" class="form-control" name="username">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["username"])){echo $errores["username"];}; ?> </span>
-						</div>
+              <div class="invalid-feedback"></div>
+            </div>
 
 						<div class="form-group">
-							<label for="">Nombre:</label>
+							<label for="name">Nombre:</label>
 							<input type="text" value="<?php // echo $nameDefault ?>" class="form-control" name="name">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["name"])){echo $errores["name"];} ; ?> </span>
+              <div class="invalid-feedback"></div>
 						</div>
 
 						<div class="form-group">
-							<label for="">Correo electrónico:</label>
+							<label for="email">Correo electrónico:</label>
 							<input type="email" value="<?php // echo $emailDefault ?>" class="form-control" name="email" placeholder="user@email.com">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["email"])){echo $errores["email"];} ; ?> </span>
+              <div class="invalid-feedback"></div>
 						</div>
 
 						<div class="form-group">
-							<label for="">Contraseña:</label>
+							<label for="password">Contraseña:</label>
 							<input type="password" class="form-control" name="password" value="<?php // echo ""; ?>">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["password"])){echo $errores["password"];} ; ?> </span>
+              <div class="invalid-feedback"></div>
 						</div>
 
 						<div class="form-group">
-							<label for="">Repite contraseña:</label>
+							<label for="cpassword">Repite contraseña:</label>
 							<input type="password" class="form-control" name="cpassword" value="<?php // echo ""; ?>">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["cpassword"])){echo $errores["cpassword"];} ; ?> </span>
 							<br>
+              <div class="invalid-feedback"></div>
 						</div>
 
 						<label for="">Imagen de perfil: </label>
@@ -85,22 +90,27 @@
 								<input type="file" class="custom-file-input" accept="image/jpeg" name="userAvatar">
 							  <label class="custom-file-label" for="customFile">Elegir imagen</label>
 								<span style="color:red; font-size:12px;"> <?php // if(isset($errorAvatar)){echo $errorAvatar;} ; ?> </span>
+                <div class="invalid-feedback"></div>
 							</div>
 							<br><br>
 
-							<label>País:</label>
-								<select name="country" class="custom-select">
-									<option>Argentina</option>
-									<option>Bolivia</option>
-									<option>Brasil</option>
-									<option>Colombia</option>
-									<option>Chile</option>
-									<option>Ecuador</option>
-									<option>Paraguay</option>
-									<option>Perú</option>
-									<option>Uruguay</option>
-									<option>Venezuela</option>
-								</select>
+              <div class="form-group">
+							<label for="country">País de nacimiento</label>
+							<select class="form-control" name="country">
+								<option value="">Elegí tu país</option>
+								<option value="Argentina">Argentina</option>
+								<option value="Bolivia">Bolivia</option>
+								<option value="Brasil">Brasil</option>
+								<option value="Chile">Chile</option>
+								<option value="Colombia">Colombia</option>
+								<option value="Ecuador">Ecuador</option>
+								<option value="Paraguay">Paraguay</option>
+								<option value="Perú">Perú</option>
+								<option value="Uruguay">Uruguay</option>
+								<option value="Venezuela">Venezuela</option>
+							</select>
+							<div class="invalid-feedback"></div>
+						</div>
 
 								<br><br>
 								<label><input type="checkbox"> Acepto los <a href= "terminosycondiciones.php">términos y condiciones</a>.</label>
@@ -117,4 +127,8 @@
 			</div>
 		</section>
     <br>
+@endsection
+
+@section('custom-js')
+<script src={{ asset('/js/signUpValidator.js')}} ></script>
 @endsection
