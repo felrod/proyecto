@@ -49,42 +49,41 @@
 						<form action="signup.php" class="user-form" method="POST" enctype="multipart/form-data">
 
 						<div class="form-group">
-							<label for="username">Nombre de usuario:</label>
+							<label for="username">Nombre de usuario</label>
 							<input type="text" value="<?php // echo $usernameDefault?>" class="form-control" name="username">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["username"])){echo $errores["username"];}; ?> </span>
               <div class="invalid-feedback"></div>
             </div>
 
 						<div class="form-group">
-							<label for="name">Nombre:</label>
+							<label for="name">Nombre</label>
 							<input type="text" value="<?php // echo $nameDefault ?>" class="form-control" name="name">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["name"])){echo $errores["name"];} ; ?> </span>
               <div class="invalid-feedback"></div>
 						</div>
 
 						<div class="form-group">
-							<label for="email">Correo electrónico:</label>
+							<label for="email">Correo electrónico</label>
 							<input type="email" value="<?php // echo $emailDefault ?>" class="form-control" name="email" placeholder="user@email.com">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["email"])){echo $errores["email"];} ; ?> </span>
               <div class="invalid-feedback"></div>
 						</div>
 
 						<div class="form-group">
-							<label for="password">Contraseña:</label>
+							<label for="password">Contraseña</label>
 							<input type="password" class="form-control" name="password" value="<?php // echo ""; ?>">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["password"])){echo $errores["password"];} ; ?> </span>
               <div class="invalid-feedback"></div>
 						</div>
 
 						<div class="form-group">
-							<label for="cpassword">Repite contraseña:</label>
+							<label for="cpassword">Repite contraseña</label>
 							<input type="password" class="form-control" name="cpassword" value="<?php // echo ""; ?>">
 							<span style="color:red; font-size:12px;"> <?php // if(isset($errores["cpassword"])){echo $errores["cpassword"];} ; ?> </span>
-							<br>
               <div class="invalid-feedback"></div>
 						</div>
 
-						<label for="">Imagen de perfil: </label>
+						<label for="">Imagen de perfil</label>
 
 							<div class="custom-file">
 								<input type="file" class="custom-file-input" accept="image/jpeg" name="userAvatar">
@@ -110,18 +109,28 @@
 								<option value="Venezuela">Venezuela</option>
 							</select>
 							<div class="invalid-feedback"></div>
-						</div>
+						  </div>
+
+              <div class="">
+                <label for="">Provincia</label>
+                <select id= "provincias" class="form-control" name="province">
+
+                </select>
+
+              </div>
 
 								<br><br>
-								<label><input type="checkbox"> Acepto los <a href= "terminosycondiciones.php">términos y condiciones</a>.</label>
+                <div class="">
+								<label><input id="check" type="checkbox"> Acepto los <a href= "terminosycondiciones.php">términos y condiciones</a>.</label>
+                </div>
 								<br><br>
 
 							<div class="row justify-content-center">
-								<button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
+								<button type="submit" id= "submit" class="btn btn-primary btn-lg">Registrarse</button>
 								<br>
 							</div>
-
 						</form>
+
 					</div>
 				</article>
 			</div>

@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title> @yield('title')</title>
     <link rel="stylesheet" href={{ asset('/css/bootstrap.min.css') }}>
-    <link rel="stylesheet" href={{ asset('/css/styles.css')}}>
-    <link rel="stylesheet" href={{ asset('/css/home-index.css')}}>
+    <link rel="stylesheet" href={{ asset('/css/styles.css') }}>
+    <link rel="stylesheet" href={{ asset('/css/home-index.css') }}>
+    <link rel="stylesheet" href={{ asset('/css/forms.css') }}>
 </head>
   <!-- <body> -->
     @include('partials.header')

@@ -1,8 +1,8 @@
 window.addEventListener('load', function () {
-  
-  var form = document.querySelector(".user-form");
 
+  var form = document.querySelector(".user-form");
   var fields = form.elements;
+  var checkbox = document.getElementById("check");
 
   fields = Array.from(fields);
   fields.pop();
@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
-      error.innerText = 'El campo ' + nameField + ' es obligatorio';
+      error.innerText = 'Este campo es obligatorio';
     } else {
       error.innerText = '';
         this.classList.remove('is-invalid');
@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
-      error.innerText = 'El campo ' + nameField + ' es obligatorio';
+      error.innerText = 'Este campo es obligatorio';
     } else {
       error.innerText = '';
       this.classList.remove('is-invalid');
@@ -49,7 +49,7 @@ window.addEventListener('load', function () {
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
-      error.innerText = 'El campo ' + nameField + ' es obligatorio';
+      error.innerText = 'Este campo es obligatorio';
     } else {
       error.innerText = '';
       this.classList.remove('is-invalid');
@@ -61,7 +61,7 @@ window.addEventListener('load', function () {
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
-      error.innerText = 'El campo ' + nameField + ' es obligatorio';
+      error.innerText = 'Este campo es obligatorio';
     } else if (!regexEmail.test(this.value.trim())) {
       error.innerText = 'El formato de email no es valido';
     } else {
@@ -77,12 +77,24 @@ window.addEventListener('load', function () {
   fieldEmail.addEventListener('blur', emptyAndEmailValidate);
   fieldCountry.addEventListener('blur', emptyValidate);
 
+  $(document).ready(function() {
+    $("#submit").on("click", function() {
+        var condiciones = $("#check").is(":checked");
+        if (!condiciones) {
+            alert("Debe aceptar los términos y condiciones");
+            event.preventDefault();
+        }
+    });
+});
+
+//contraseñas:
+
   fieldPassword.addEventListener('blur', function () {
     var error = this.parentElement.querySelector('.invalid-feedback');
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
-      error.innerText = 'El campo ' + nameField + ' es obligatorio';
+      error.innerText = 'Este campo es obligatorio';
     } else if (this.value.trim().length < 4) {
       error.innerText = 'La contraseña debe tener más de 4 caracteres';
     } else {
@@ -93,7 +105,7 @@ window.addEventListener('load', function () {
 
   fieldRepPassword.addEventListener('change', function () {
     var error = this.parentElement.querySelector('.invalid-feedback');
-    if (this.value.trim() !== campoPassword.value.trim()) {
+    if (this.value.trim() !== fieldPassword.value.trim()) {
       this.classList.add('is-invalid');
       error.innerText = 'Las contraseñas no coinciden';
     } else {
@@ -117,7 +129,7 @@ window.addEventListener('load', function () {
         var nameField = field.parentElement.querySelector('label').innerText;
         if (field.value.trim() === '') {
           field.classList.add('is-invalid');
-          error.innerText = 'El campo ' + nameField + ' es obligatorio';
+          error.innerText = 'Este campo es obligatorio';
         }
       });
     } else if (fieldRepPassword.value !== fieldPassword.value) {
