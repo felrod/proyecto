@@ -13,40 +13,32 @@ window.onload = function() {
 
     });
   }
-//xddddddddddd
 
   var loadProvinces = function(provinces) {
 
-    var dropdownProvincias = document.getElementById('dropdown-provincias');
+    var dropdownProvinces = document.getElementById('dropdown-provincias');
 
     provincias.forEach(function(provincia) {
-
       var optionNuevo = document.createElement('option');
-
       optionNuevo.setAttribute('value', provincia);
-
       optionNuevo.innerText = provincia;
-
       dropdownProvincias.append(optionNuevo);
 
     });
 
   }
 
+//completar loadProvinces
+
 
 
   fetch('https://restcountries.eu/rest/v2/all')
-
     .then(function(response) {
-
       return response.json();
-
     })
 
     .then(function(data) {
-
       var paises = [];
-
       data.forEach(function(paisApi){
 
         if (paisApi.subregion == 'South America' && (paisApi.languages[0].nativeName == 'Español' || paisApi.languages[0].nativeName == 'Português')) {

@@ -111,13 +111,7 @@
 							<div class="invalid-feedback"></div>
 						  </div>
 
-              <div class="">
-                <label for="">Provincia</label>
-                <select id= "provincias" class="form-control" name="province">
-
-                </select>
-
-              </div>
+              <div class=""></div>
 
 								<br><br>
                 <div class="">
