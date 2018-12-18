@@ -1,4 +1,4 @@
 function backgroundChange () {
-  div = document.getElementById('changee');
-  div.style.backgroundColor = (div.style.backgroundColor == 'rgb(204, 204, 204)') ? 'transparent' : '#CCCCCC';
+  body = document.getElementById('body');
+  body.style.backgroundColor = (body.style.backgroundColor == 'rgb(161, 155, 155)') ? 'transparent' : '#A19B9B';
 };

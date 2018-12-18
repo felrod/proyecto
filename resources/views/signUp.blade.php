@@ -89,7 +89,6 @@
 								<input type="file" class="custom-file-input" accept="image/jpeg" name="userAvatar">
 							  <label class="custom-file-label" for="customFile">Elegir imagen</label>
 								<span style="color:red; font-size:12px;"> <?php // if(isset($errorAvatar)){echo $errorAvatar;} ; ?> </span>
-                <div class="invalid-feedback"></div>
 							</div>
 							<br><br>
 
@@ -111,7 +110,7 @@
 							<div class="invalid-feedback"></div>
 						  </div>
 
-              <div class=""></div>
+              <div id="fieldProvince" class=""></div>
 
 								<br><br>
                 <div class="">
@@ -134,4 +133,5 @@
 
 @section('custom-js')
 <script src={{ asset('/js/signUpValidator.js')}} ></script>
+<script src={{ asset('/js/api.js')}} ></script>
 @endsection

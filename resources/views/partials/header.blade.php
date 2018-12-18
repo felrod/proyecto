@@ -31,7 +31,7 @@
       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" style='border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;'><img src="/images/icon-search.jpg" alt="iconSearch" width="20px"></button>
     </form>
 
-    <div id="changee" class="class="d-flex justify-content-end"">
+    <div class="class="d-flex justify-content-end"">
       <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="myDropDown" data-toggle="dropdown">Mi Cuenta <img src="<?php //if($auth->estaLogueado()):?><?php //else: ?>/images/default-profile.jpg<?php //endif; ?>" width="35px"></a>
@@ -41,7 +41,8 @@
               <a class="dropdown-item" href="settings">Configuraciones</a>
 
 
-              <a class="colorchange" href="#" onclick="backgroundChange();">Cambiar color</a>
+              <a class="dropdown-item" href="#" id="changee">Cambiar color</a>
+              <!-- <a class="dropdown-item" href="#" onclick="backgroundChange();">Cambiar color</a> -->
 
 
               <div class="dropdown-divider"></div>

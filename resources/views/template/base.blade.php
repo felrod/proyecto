@@ -8,7 +8,7 @@
     <link rel="stylesheet" href={{ asset('/css/home-index.css') }}>
     <link rel="stylesheet" href={{ asset('/css/forms.css') }}>
 </head>
-  <!-- <body> -->
+<body id="body">
     @include('partials.header')
     <div class="container">
       <div class="row">
@@ -20,9 +20,8 @@
     @include('partials.footer')
     <script src={{ asset('/js/jquery-3.3.1.min.js')}} ></script>
 		<script src={{ asset('/js/bootstrap.min.js')}} ></script>
-    <script src={{ asset('/js/darkTheme.js')}} ></script>
-
-    </script>
+    <!-- <script src={{ asset('/js/darkTheme.js')}} ></script> -->
+    <script src={{ asset('/js/darkss.js')}} ></script>
 		@yield('custom-js')
-  </body>
+</body>
 </html>

@@ -1,7 +1,7 @@
 window.onload = function() {
 
-  var selectCountries = document.querySelector('.form-group');
-  var fieldProvince = document.getElementById('provincias');
+  var selectCountries = document.querySelector('.form-control');
+  var fieldProvince = document.getElementById('fieldProvince');
 
   var loadCountries = function(countries) {
 
@@ -18,11 +18,11 @@ window.onload = function() {
 
     var dropdownProvinces = document.getElementById('dropdown-provincias');
 
-    provincias.forEach(function(provincia) {
+    provinces.forEach(function(province) {
       var optionNuevo = document.createElement('option');
-      optionNuevo.setAttribute('value', provincia);
-      optionNuevo.innerText = provincia;
-      dropdownProvincias.append(optionNuevo);
+      optionNuevo.setAttribute('value', province);
+      optionNuevo.innerText = province;
+      dropdownProvinces.append(optionNuevo);
 
     });
 
@@ -32,87 +32,58 @@ window.onload = function() {
 
 
 
-  fetch('https://restcountries.eu/rest/v2/all')
-    .then(function(response) {
-      return response.json();
+fetch('https://restcountries.eu/rest/v2/all')
+
+  .then(function(response) {
+    return response.json();
+  })
+
+  .then(function(data) {
+    var countries = [];
+    data.forEach(function(countryApi){
+      if (countryApi.subregion == 'South America' && (countryApi.languages[0].nativeName == 'Espa�ol')) {
+        countries.push(countryApi.nativeName)
+      }
     })
+    loadCountries(countries);
+  })
 
-    .then(function(data) {
-      var paises = [];
-      data.forEach(function(paisApi){
-
-        if (paisApi.subregion == 'South America' && (paisApi.languages[0].nativeName == 'Español' || paisApi.languages[0].nativeName == 'Português')) {
-
-          paises.push(paisApi.nativeName)
-
-        }
-
-      })
-
-      cargarPaises(paises);
-
-    })
-
-    .catch(function(error) {
-
-      console.log("Ocurrió un error: " + error);
-
-    })
+  .catch(function(error) {
+    console.log("Ocurri� un error: " + error);
+  })
 
 
 
-  selectPaises.addEventListener("change", function(){
 
-
+  selectCountries.addEventListener("change", function(){
 
     if (this.options[this.selectedIndex].value == 'Argentina') {
 
-
-
-      campoProvincia.innerHTML = '<label for="state" class="registro-nombre">Provincia:</label><div class="registro-campo"><select class="registro-dropdown" name="state" id="dropdown-provincias"><option value="">----- Elige una provincia -----</option></select></div>';
-
+      fieldProvince.innerHTML = '<label for="fieldProvince">Provincia:</label><div class="form-group"><select class="form-control" name="fieldProvince" id="dropdown-provincias"><option value="">Elige una provincia</option></select></div>';
 
 
       fetch('https://dev.digitalhouse.com/api/getProvincias')
 
         .then(function(response) {
-
           return response.json();
-
         })
 
         .then(function(data) {
-
-          var provincias = [];
-
-          data.forEach(function(provincia) {
-
-            provincias.push(provincia.state);
-
+          var provinces = [];
+          data.forEach(function(province) {
+            provinces.push(province.state);
           });
-
-          cargarProvincias(provincias);
-
+          loadProvinces(provinces);
         })
 
         .catch(function(error) {
-
           console.log("Ocurrió un error: " + error);
-
         })
-
-
 
     } else {
 
-      campoProvincia.innerHTML = "";
+      fieldProvince.innerHTML = "";
 
     }
-
-
-
   });
-
-
-
 }
