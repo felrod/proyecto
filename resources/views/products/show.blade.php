@@ -3,46 +3,30 @@
 @section('title')
   
 @section('content')
-
-<?php //require_once("config.php");
-//if ($auth->estaLogueado()) {
-  //$user = $db->traerPorMail($_SESSION["logueado"]);
-//}
- ?>
-    <!-- Contenido-->
-    <section class="container">
-      <article class="row">
-        <article class="col-md-8">
-          <article class="caption">
-            <h6 class=descripcion>Turbo Ventilador Liliana VOTR18</h6>
-          <article class="img-thumbnail">
-            <img src="images/abanico_liliana.jpg" alt="Avanico Liliana" style="width:70%">
-              </article>
-          </article>
-      </article>
-      <article class="col-md-4">
-        <article class="caption">
-          <h3 class=precio align=center>$ 1.200</h3>
-        </article>
-        <article class="jumbotron">
-
-            <article class="caption">
-              <img src="images/icon-star.png" alt="Avanico Liliana" style="width:10%" class="likeStar">
-            </article>
-        </article>
-        <article class="caption">
-          <button type="button" class="btn btn-primary">COMPRAR</button>
-        </article>
-      </article>
-      <br><br>
-      <article class="col-md-12">
-        <article class="img-thumbnail">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <br><br><br>
-        </article>
-      </article>
-      </article>
-    </section>
+  <br>
+    <div class="container" id="product-section">
+       <div class="row">
+        <div class="col-md-6">
+          <img src="{{ Storage::url('products/' . $product->img) }}"/>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+       <div class="col-md-12">
+        <h1>{{ $product->name }}</h1>
+        <br>
+        <p class="description">
+         {{ $product->desc }}
+        </p>
+      </div>
+      <div class="row">
+     <div class="col-md-12  ">
+      <h2 class="product-price">${{ $product->price }}</h2>
+      <br>
+      <button type="button" class="btn btn-primary">COMPRAR</button>
+     </div>
+    </div><!-- end row -->
+        </div>
+       </div><!-- end row -->
+      </div><!-- end container -->
+        <br>
 @endsection
