@@ -63,6 +63,7 @@ window.addEventListener('load', function () {
       this.classList.add('is-invalid');
       error.innerText = 'Este campo es obligatorio';
     } else if (!regexEmail.test(this.value.trim())) {
+      this.classList.add('is-invalid');
       error.innerText = 'El formato de email no es valido';
     } else {
       error.innerText = '';
@@ -96,6 +97,7 @@ window.addEventListener('load', function () {
       this.classList.add('is-invalid');
       error.innerText = 'Este campo es obligatorio';
     } else if (this.value.trim().length < 4) {
+      this.classList.add('is-invalid');
       error.innerText = 'La contraseña debe tener más de 4 caracteres';
     } else {
       error.innerText = '';
