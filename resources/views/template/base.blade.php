@@ -8,7 +8,7 @@
     <link rel="stylesheet" href={{ asset('/css/home-index.css') }}>
     <link rel="stylesheet" href={{ asset('/css/forms.css') }}>
 </head>
-  <!-- <body> -->
+<body id="body" >
     @include('partials.header')
     <div class="container">
       <div class="row">
@@ -24,5 +24,5 @@
 
     </script>
 		@yield('custom-js')
-  </body>
+</body>
 </html>
