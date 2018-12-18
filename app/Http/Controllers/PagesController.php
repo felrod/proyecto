@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home(){
-      return view('home');
+      $products = \App\Product::paginate(8);
+      return view('home')->with(compact('products'));
     }
 
     public function aboutus(){
@@ -63,6 +64,51 @@ class PagesController extends Controller
 
     public function signUp(){
       return view('signUp');
+    }
+
+    public function catCelulares(){
+      $products = \App\Product::where('category_id', 1)->get();
+      return view('categories.celulares')->with(compact('products'));
+    }
+
+    public function catAire(){
+      $products = \App\Product::where('category_id', 2)->get();
+      return view('categories.airesycalefaccion')->with(compact('products'));
+    }
+
+    public function catCamaras(){
+      $products = \App\Product::where('category_id', 3)->get();
+      return view('categories.celulares')->with(compact('products'));
+    }
+
+    public function catCocina(){
+      $products = \App\Product::where('category_id', 4)->get();
+      return view('categories.cocina')->with(compact('products'));
+    }
+
+    public function catOficina(){
+      $products = \App\Product::where('category_id', 5)->get();
+      return view('categories.oficina')->with(compact('products'));
+    }
+
+    public function catInformatica(){
+      $products = \App\Product::where('category_id', 6)->get();
+      return view('categories.informatica')->with(compact('products'));
+    }
+
+    public function catLavado(){
+      $products = \App\Product::where('category_id', 7)->get();
+      return view('categories.lavado')->with(compact('products'));
+    }
+
+    public function catGaming(){
+      $products = \App\Product::where('category_id', 8)->get();
+      return view('categories.gaming')->with(compact('products'));
+    }
+
+    public function catTv(){
+      $products = \App\Product::where('category_id', 9)->get();
+      return view('categories.tv')->with(compact('products'));
     }
 
 }

@@ -3,13 +3,13 @@
 @section('title', "sasa")
 
 @section('content')
-
-    <h1>NOVEDADES!!</h1>
-    <br>
     {{-- @foreach ($products as $product)
       <li>{{ $product->name }} -- {{ $product->status->name }}</li>
     @endforeach --}}
     <div class="container">
+      <br>
+      <h1>NOVEDADES !!</h1>
+      <br>
       <!-- Page Features -->
       <div class="row text-center">
         @forelse ($products as $oneProduct)
@@ -21,7 +21,7 @@
               <p class="card-text">{{ $oneProduct->name }} -- {{ $oneProduct->status->name }}</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-primary">Agregar</a>
               <a href="{{ route('products.show',$oneProduct->id)}}" class="btn btn-primary">Detalles</a>
             </div>
           </div>
@@ -34,5 +34,4 @@
         {{ $products->links() }}
       </div> --}}
     </div>
-
 @endsection

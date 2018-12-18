@@ -44,3 +44,21 @@ Route::get('/login', 'PagesController@login');
 Route::get('/signup', 'PagesController@signUp');
 
 Route::resource('/products', 'ProductsController');
+
+Route::get('/cel', 'PagesController@catCelulares');
+
+Route::get('/airesycalefaccion', 'PagesController@catAire');
+
+Route::get('/cams', 'PagesController@catCamaras');
+
+Route::get('/cocina', 'PagesController@catCocina');
+
+Route::get('/office', 'PagesController@catOficina');
+
+Route::get('/informatic', 'PagesController@catInformatica');
+
+Route::get('/lavado', 'PagesController@catLavado');
+
+Route::get('/gaming', 'PagesController@catGaming');
+
+Route::get('/tv', 'PagesController@catTv');

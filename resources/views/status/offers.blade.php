@@ -1,16 +1,15 @@
 @extends('template.base')
 
 @section('title')
-@endsection
 
 @section('content')
-   <br>
-   <h1>OFERTAS !!</h1>
-   <br>
    {{-- @foreach ($products as $product)
      <li>{{ $product->name }} -- {{ $product->status->name }}</li>
    @endforeach --}}
    <div class="container">
+     <br>
+     <h1>OFERTAS !!</h1>
+     <br>
      <!-- Page Features -->
      <div class="row text-center">
        @forelse ($products as $oneProduct)

@@ -8,7 +8,7 @@
   @endforeach --}}
   <div class="container">
     <br>
-    <h1>HOTSALES !!</h1>
+    <h1>AIRES Y CALEFACCIONES !!</h1>
     <br>
     <!-- Page Features -->
     <div class="row text-center">
@@ -18,7 +18,7 @@
           <img class="card-img-top" src="{{ Storage::url('products/' . $oneProduct->img) }}" alt="image" style="width:100%">
           <div class="card-body">
             <h4 class="card-title">$ {{ $oneProduct->price }}</h4>
-            <p class="card-text">{{ $oneProduct->name }} -- {{ $oneProduct->status->name }}</p>
+            <p class="card-text">{{ $oneProduct->name }} -- {{ $oneProduct->status->name }} -- {{ $oneProduct->category->name }}</p>
           </div>
           <div class="card-footer">
             <a href="#" class="btn btn-primary">Comprar</a>
