@@ -43,6 +43,4 @@ Route::get('/login', 'PagesController@login');
 
 Route::get('/signup', 'PagesController@signUp');
 
-Route::get('/products', 'PagesController@products');
-
-Route::get('/productdetail', 'PagesController@productDetails');
+Route::resource('/products', 'ProductsController');

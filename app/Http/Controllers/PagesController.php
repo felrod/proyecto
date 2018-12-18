@@ -31,15 +31,18 @@ class PagesController extends Controller
     }
 
     public function news(){
-      return view('status.news');
+      $products = \App\Product::where('status_id', 4)->get();
+      return view('status.news')->with(compact('products'));
     }
 
     public function offers(){
-      return view('status.offers');
+      $products = \App\Product::where('status_id', 2)->get();
+      return view('status.offers')->with(compact('products'));
     }
 
     public function hotSales(){
-      return view('status/hotSales');
+      $products = \App\Product::where('status_id', 3)->get();
+      return view('status.hotSales')->with(compact('products'));
     }
 
     public function termsConditions(){
@@ -60,14 +63,6 @@ class PagesController extends Controller
 
     public function signUp(){
       return view('signUp');
-    }
-
-    public function products(){
-      return view('products');
-    }
-
-    public function productDetails(){
-      return view('productDetails');
     }
 
 }
