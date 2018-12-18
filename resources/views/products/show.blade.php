@@ -1,8 +1,7 @@
 @extends('template.base')
 
 @section('title')
-@endsection
-
+  
 @section('content')
 
 <?php //require_once("config.php");
