@@ -41,7 +41,8 @@
               <a class="dropdown-item" href="settings">Configuraciones</a>
 
 
-              <a class="dropdown-item" href="#" onclick="backgroundChange();">Cambiar color</a>
+              <a class="dropdown-item" href="#" id="changee">Cambiar color</a>
+              <!-- <a class="dropdown-item" href="#" onclick="backgroundChange();">Cambiar color</a> -->
 
 
               <div class="dropdown-divider"></div>
