@@ -78,7 +78,7 @@ class PagesController extends Controller
 
     public function catCamaras(){
       $products = \App\Product::where('category_id', 3)->get();
-      return view('categories.celulares')->with(compact('products'));
+      return view('categories.camaras')->with(compact('products'));
     }
 
     public function catCocina(){

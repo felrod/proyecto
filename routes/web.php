@@ -55,7 +55,7 @@ Route::get('/cocina', 'PagesController@catCocina');
 
 Route::get('/office', 'PagesController@catOficina');
 
-Route::get('/informatic', 'PagesController@catInformatica');
+Route::get('/informatica', 'PagesController@catInformatica');
 
 Route::get('/lavado', 'PagesController@catLavado');
 
