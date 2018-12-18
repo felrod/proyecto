@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home(){
-      return view('home');
+      $products = \App\Product::paginate(8);
+      return view('home')->with(compact('products'));
     }
 
     public function aboutus(){
