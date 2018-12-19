@@ -34,29 +34,26 @@
     <div class="class="d-flex justify-content-end"">
       <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="myDropDown" data-toggle="dropdown">Mi Cuenta <img src="<?php //if($auth->estaLogueado()):?><?php //else: ?>/images/default-profile.jpg<?php //endif; ?>" width="35px"></a>
+          <a class="nav-link dropdown-toggle" href="#" id="myDropDown" data-toggle="dropdown">Mi Cuenta <img src=@guest "/images/default-profile.jpg" @else "{{ auth::user()->img}}" @endguest width="35px"></a>
           <div class="dropdown-menu" aria-labelledby="myDropDown">
-            <?php // if($auth->estaLogueado()): ?>
-              <a class="dropdown-item" href="profile?username=">Mi perfil</a>
-              <a class="dropdown-item" href="settings">Configuraciones</a>
-
-
+            @guest
               <a class="dropdown-item" href="#" id="changee">Cambiar color</a>
               <!-- <a class="dropdown-item" href="#" onclick="backgroundChange();">Cambiar color</a> -->
-
-
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="logout">Log Out</a>
-            <?php // else: ?>
-              <a class="dropdown-item" href="login">Log In</a>
+              <a class="dropdown-item" href="/login">Log In</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="signup">Sign Up</a>
-            <?php //endif; ?>
-          </div>
+              <a class="dropdown-item" href="/signup">Sign Up</a>
+            @else
+              <a class="dropdown-item" href="/profile?username=">Mi perfil</a>
+              <a class="dropdown-item" href="/settings">Configuraciones</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/logout">Log Out</a>
+              </div>
+            @endguest
         </ul>
       </div>
-      <div class="kart">
-        <a href="#"><img src="/images/icon-cart.png" alt="cart" width="35px"></a>
+      <div class="cart">
+        <a href="/cart"><img src="/images/icon-cart.png" alt="cart" width="35px"></a>
       </div>
   </div>
 </nav>
