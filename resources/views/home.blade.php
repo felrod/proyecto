@@ -47,7 +47,7 @@
 
 </section>
 <br>
-  <a href="/products">
+  <a href="/products" >
 <button type="button" class="btn btn-link">Todos los Productos</button>
 </a>
 <br>
