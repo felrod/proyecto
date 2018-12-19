@@ -13,3 +13,7 @@ font-weight: "bold";
 
 font-style: "italic";
 }
+
+.dark-theme {
+  background-color: rgba(0, 0, 0, 0.5);
+}

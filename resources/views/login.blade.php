@@ -35,7 +35,7 @@
     <div class="row justify-content-center">
       <article class="col-md-5">
         <div class="auth-form-body mt-3">
-          <h2 class= "row justify-content-center">Inicia Sesión!</h2>
+          <h2 class= "row justify-content-center">Iniciar Sesión</h2>
 
             <br><br>
 

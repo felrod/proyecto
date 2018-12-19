@@ -1,7 +1,9 @@
 window.onload = function() {
 
-  var selectCountries = document.querySelector('.form-control');
+  var selectCountries = document.querySelector('.countries');
   var fieldProvince = document.getElementById('fieldProvince');
+
+  console.log(selectCountries);
 
   var loadCountries = function(countries) {
 
@@ -41,7 +43,7 @@ fetch('https://restcountries.eu/rest/v2/all')
   .then(function(data) {
     var countries = [];
     data.forEach(function(countryApi){
-      if (countryApi.subregion == 'South America' && (countryApi.languages[0].nativeName == 'Espa�ol')) {
+      if (countryApi.subregion == 'South America' && (countryApi.languages[0].nativeName == 'Español')) {
         countries.push(countryApi.nativeName)
       }
     })

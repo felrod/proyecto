@@ -39,12 +39,7 @@
             <?php // if($auth->estaLogueado()): ?>
               <a class="dropdown-item" href="profile?username=">Mi perfil</a>
               <a class="dropdown-item" href="settings">Configuraciones</a>
-
-
-              <a class="dropdown-item" href="#" id="changee">Cambiar color</a>
-              <!-- <a class="dropdown-item" href="#" onclick="backgroundChange();">Cambiar color</a> -->
-
-
+              <a class="dropdown-item" id="changeBG" href="#">Dark Theme</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="logout">Log Out</a>
             <?php // else: ?>

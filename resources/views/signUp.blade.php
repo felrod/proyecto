@@ -42,7 +42,7 @@
 					<div class="auth-form-body mt-3">
 
 
-					<h2 class= "row justify-content-center">Registrate!</h2>
+					<h2 class= "row justify-content-center">Registrarse</h2>
 
 						<br><br>
 
@@ -94,9 +94,9 @@
 
               <div class="form-group">
 							<label for="country">País de nacimiento</label>
-							<select class="form-control" name="country">
+							<select class="form-control countries" name="country">
 								<option value="">Elegí tu país</option>
-								<option value="Argentina">Argentina</option>
+								<!-- <option value="Argentina">Argentina</option>
 								<option value="Bolivia">Bolivia</option>
 								<option value="Brasil">Brasil</option>
 								<option value="Chile">Chile</option>
@@ -105,7 +105,7 @@
 								<option value="Paraguay">Paraguay</option>
 								<option value="Perú">Perú</option>
 								<option value="Uruguay">Uruguay</option>
-								<option value="Venezuela">Venezuela</option>
+								<option value="Venezuela">Venezuela</option> -->
 							</select>
 							<div class="invalid-feedback"></div>
 						  </div>
