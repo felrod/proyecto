@@ -8,6 +8,35 @@ use App\Product;
 class ProductsController extends Controller
 {
 
+    public function storeAndUpdate($request, $product)
+    {
+      $product->name = $request->input('name');
+      $product->price = $request->input('price');
+      $product->desc = $request->input('desc');
+      $product->category_id = $request->input('category_id');
+      $product->brand_id = $request->input('brand_id');
+      $product->status_id = $request->input('status_id');
+
+      // Traemos todo el objeto de imagen
+      $productImage = $request->file('image');
+
+      // Armo un nombre único para este archivo
+      $imageName = uniqid("product_img_") . "." . $productImage->extension();
+
+      // Subo el archivo de imagen
+      $productImage->storePubliclyAs("public/products", $imageName);
+
+      // Lo guardamos en base de datos
+      $product->image = $imageName;
+      $product->save();
+    }
+
+    /**
+    * Display a listing of the resource.
+    *
+    * @return \Illuminate\Http\Response
+    */
+
     public function index(Request $request)
     {
       switch ($request->orderBy){

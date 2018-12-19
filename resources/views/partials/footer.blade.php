@@ -1,15 +1,14 @@
 <footer>
   <div class="">
     <ul class="ul-icon">
-      <li class="icon"><a class="icon" href="https://www.facebook.com/"><img src="images/icon-facebook.png" alt="icon-fb"></a></li>
-      <li class="icon"><a class="icon" href="https://www.youtube.com/"><img src="images/icon-youtube.png" alt="icon-yt"></a></li>
-      <li class="icon"><a class="icon" href="https://www.instagram.com/"><img src="images/icon-instagram.png" alt="icon-ig"></a></li>
-      <li class="icon"><a class="icon" href="https://www.twitter.com/"><img src="images/icon-twitter.png" alt="icon-tw"></a></li>
-      <li class="icon"><a class="icon" href="https://www.amazon.com/"><img src="images/icon-amazon.png" alt="icon-am"></a></li>
+      <li class="icon"><a class="icon" href="https://www.facebook.com/"><img src="/images/icon-facebook.png" alt="icon-fb"></a></li>
+      <li class="icon"><a class="icon" href="https://www.youtube.com/"><img src="/images/icon-youtube.png" alt="icon-yt"></a></li>
+      <li class="icon"><a class="icon" href="https://www.instagram.com/"><img src="/images/icon-instagram.png" alt="icon-ig"></a></li>
+      <li class="icon"><a class="icon" href="https://www.twitter.com/"><img src="/images/icon-twitter.png" alt="icon-tw"></a></li>
+      <li class="icon"><a class="icon" href="https://www.amazon.com/"><img src="/images/icon-amazon.png" alt="icon-am"></a></li>
     </ul>
 
     <ul class="mapa">
-
       <div class="Categorias">
         <h6>Categorias</h6>
         <li><a href="#">Camaras</a></li>
