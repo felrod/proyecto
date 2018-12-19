@@ -47,7 +47,7 @@
 
 </section>
 <br>
-<a href="products" target="_blank">
+  <a href="/products" >
 <button type="button" class="btn btn-link">Todos los Productos</button>
 </a>
 <br>
@@ -81,7 +81,7 @@
           <p class="card-text">{{ $oneProduct->name }}</p>
         </div>
         <div class="card-footer">
-          <a href="#" class="btn btn-primary">Comprar</a>
+          {{-- <a href="#" class="btn btn-primary">Comprar</a> --}}
           <a href="{{ route('products.show',$oneProduct->id)}}" class="btn btn-primary">Detalles</a>
         </div>
       </div>
