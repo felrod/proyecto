@@ -25,10 +25,10 @@
             @endif
             <div class="card-body">
               <h4 class="card-title">$ {{ $oneProduct->price }}</h4>
-              <p class="card-text">{{ $oneProduct->name }} -- {{ $oneProduct->status->name }}</p>
+              <p class="card-text">{{ $oneProduct->name }}</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Agregar</a>
+              {{-- <a href="#" class="btn btn-primary">Agregar</a> --}}
               <a href="{{ route('products.show',$oneProduct->id)}}" class="btn btn-primary">Detalles</a>
             </div>
           </div>
