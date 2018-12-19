@@ -30,7 +30,7 @@
               <p class="card-text">{{ $oneProduct->name }}</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Comprar</a>
+              {{-- <a href="{{route('/addCart',$oneProduct->id)}}" class="btn btn-primary">Comprar</a> --}}
               <a href="{{ route('products.show',$oneProduct->id)}}" class="btn btn-primary">Detalles</a>
             </div>
           </div>

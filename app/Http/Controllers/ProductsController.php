@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use Session;
 
 class ProductsController extends Controller
 {
@@ -150,5 +151,15 @@ class ProductsController extends Controller
 		$products = Product::all();
 		return $products;
 	}
+
+  public function addCart(Request $request, $id)
+  {
+    $product = Product::find($id);
+    $oldCart = Session::has('cart')?Session::get('cart'):null;
+    $cart = new Cart($oldCart);
+    $cart->add($product,$product->id);
+    $request->session()->put('cart',$cart);
+    return redirect()->route('product.index');
+  }
 
 }

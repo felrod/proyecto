@@ -55,5 +55,8 @@
           </div>
         </ul>
       </div>
+      <div class="kart">
+        <a href="#"><img src="/images/icon-cart.png" alt="cart" width="35px"></a>
+      </div>
   </div>
 </nav>
