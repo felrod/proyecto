@@ -1,0 +1,26 @@
+.container-fluid {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.sucursales {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+.sedes {
+  height: 200px;
+  text-align: center;
+  margin-top: -7px;
+  margin-bottom: -7px;
+}
+
+div .sedes:hover {
+  background-color: #d9cdc9;
+}

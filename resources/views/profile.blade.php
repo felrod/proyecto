@@ -59,3 +59,7 @@
 
 
 @endsection
+
+@section('moreCss')
+<link rel="stylesheet" href={{ asset('/css/profile.css') }}>
+@endsection

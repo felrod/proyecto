@@ -66,6 +66,10 @@ class PagesController extends Controller
       return view('signUp');
     }
 
+    public function offices(){
+      return view('offices');
+    }
+
     public function catCelulares(){
       $products = \App\Product::where('category_id', 1)->get();
       return view('categories.celulares')->with(compact('products'));

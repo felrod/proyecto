@@ -10,7 +10,6 @@
 // $user = $db->traerPorMail($_SESSION["logueado"]);
 // }
 ?>
-  <body>
    <div class="container-fluid">
        <div class="main row">
          <div class="col-md-3">
@@ -55,5 +54,4 @@
          </div>
        </div>
    </div>
- </body>
 @endsection

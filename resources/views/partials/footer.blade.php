@@ -23,7 +23,7 @@
       <div class="">
         <li><a href="/faq">Preguntas frecuentes</a></li>
         <li><a href="/contacts">Contactos</a></li>
-        <li><a href="">Sucursales</a></li>
+        <li><a href="/offices">Sucursales</a></li>
         <li><a href="/aboutus">Sobre nosotros</a></li>
       </div>
     </ul>

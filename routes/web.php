@@ -63,4 +63,6 @@ Route::get('/gaming', 'PagesController@catGaming');
 
 Route::get('/tv', 'PagesController@catTv');
 
+Route::get('/offices', 'PagesController@offices');
+
 Route::get('/addCart/{id}','ProductsController@addCart');
