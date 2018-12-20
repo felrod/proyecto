@@ -17,16 +17,16 @@ use Session;
 class ProductsController extends Controller
 {
 
-    public function __construct()
-    {
-      if (Auth::check()) {
+  public function __construct()
+  {
+    if (Auth::check()) {
 
-        $this->middleware('auth');
+      $this->middleware('auth');
 
-      } else {
+    } else {
 
-      }
     }
+  }
 
     public function storeAndUpdate($request, $product)
     {
@@ -84,9 +84,9 @@ class ProductsController extends Controller
 
     public function create()
 	{
-		$brands = \App\Brand::all();
-		$categories = \App\Category::all();
-    $status = \App\Status::all();
+		$brands = Brand::all();
+		$categories = Category::all();
+    $status = Status::all();
 
 		return view('products.create')->with(compact('brands', 'categories','status'));
 	}
@@ -104,7 +104,7 @@ class ProductsController extends Controller
 
 		$this->storeAndUpdate($request, $product);
 
-		return redirect('/products.index');
+		return redirect('/products');
 	}
 
 	/**
@@ -149,7 +149,7 @@ class ProductsController extends Controller
 
 	$this->storeAndUpdate($request, $product);
 
-		return redirect()->route('products.show/'.$product->id);
+		return redirect()->route('products.index');
 	}
 
 	/**

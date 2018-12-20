@@ -4,10 +4,10 @@
 
 @section('content')
 	<br>
-	<h2>Editando: {{ $product->name }}</h2>
+	<h2>Edicion: {{ $product->name }}</h2>
 	<img src="{{ Storage::url('products/' . $product->img	) }}" width="200">
 
-	<form action="/products/{{ $product->id }}" method="post" enctype="multipart/form-data">
+	<form action="{{ route('products.update', $product->id) }}" method="post" enctype="multipart/form-data">
 		@csrf
 		{{ method_field('PUT') }}
 		<div class="row">
@@ -99,7 +99,7 @@
 		</div>
 
 
-		<button type="submit" class="btn btn-success">Save product</button>
+		<button type="submit" class="btn btn-success">Guardar</button>
 	</form>
 	<br>
 	<script>
