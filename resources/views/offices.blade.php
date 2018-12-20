@@ -16,13 +16,12 @@
     <div class="main row">
       <div class="col-md-8">
         <div class="divmapa" id="lima">
-          <img src="images/offices/lima.jpg" width="100%" alt="lima">
+          <!-- <img src="images/offices/lima.jpg" width="100%" id="lima"> -->
         </div>
         <div class=""> </div>
       </div>
       <div class="col-md-4">
         <div class="sedes">
-          <a href="#" id=changeMap onclick="changeMap();">
             <br>
             <h2>Sede Lima</h2>
             Lima 1111
@@ -30,11 +29,12 @@
             +54 11 5263-7400
             <br>
             9:00 a 20:00 hs
-          </a>
         </div>
-        <div class="dropdown-divider"></div>
+        <div class="row justify-content-center">
+          <button type="button" name="button" class='btn btn-danger' onclick="cambiar();">Cambiar Sede</button>
+        </div>
+        <br>
         <div class="sedes">
-          <a href="#">
             <br>
             <h2>Sede Monroe</h2>
             Monroe 860
@@ -42,7 +42,6 @@
             +54 11 5263-7400
             <br>
             9:00 a 20:00 hs
-          </a>
         </div>
       </div>
     </div>

@@ -22,18 +22,26 @@ h1 {
   margin-bottom: -7px;
 }
 
-div .sedes:hover {
-  background-color: #d9cdc9;
-}
-
 .sedes a {
   color: black;
 }
 
-.sedes a:hover {
-  text-decoration: none;
+/* .divmapa img {
+  border-radius: 10px;
+} */
+
+.divmapa {
+z-index:200;
+background-image: url('../images/offices/lima.jpg');
+width:700px;
+height: 400px;
+border-radius: 10px;
 }
 
-.divmapa img {
-  border-radius: 10px;
+.otrodiv {
+z-index:200;
+background-image: url('../images/offices/monroe.jpg');
+width:700px;
+height:400px;
+border-radius: 10px;
 }

@@ -163,7 +163,7 @@
     </div>
 
 <br><br><br>
-<base href="#" target="_blank">
+<base href="#">
   </div>
 </div>
 @endsection
