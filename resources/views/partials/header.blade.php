@@ -44,7 +44,7 @@
               <a class="dropdown-item" href="/signup">Sign Up</a>
             @else
               @if (Auth::user()->admin)
-              <li><a href="/products/create">Crear producto</a></li>
+              <a class="dropdown-item" href="/products/create">Crear producto</a>
             @endif
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="changeBG" href="#">Dark Theme</a>
