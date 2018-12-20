@@ -43,6 +43,11 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/signup">Sign Up</a>
             @else
+              @if (Auth::user()->admin)
+              <li><a href="/products/create">Crear producto</a></li>
+            @endif
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" id="changeBG" href="#">Dark Theme</a>
               <a class="dropdown-item" href="/profile?username=">Mi perfil</a>
               <a class="dropdown-item" href="/settings">Configuraciones</a>
               <div class="dropdown-divider"></div>

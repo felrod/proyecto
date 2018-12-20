@@ -3,7 +3,7 @@ let body = document.getElementById('body');
 
 if (window.localStorage.getItem('darkTheme')) {
   console.log("hay localStorage");
-  btnChangeBG.innerText = 'Previous Theme';
+  btnChangeBG.innerText = 'White Theme';
   body.classList.add(window.localStorage.getItem('darkTheme'));
 }
 
