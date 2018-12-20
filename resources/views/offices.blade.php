@@ -15,7 +15,7 @@
     <h1>Sucursales</h1>
     <div class="main row">
       <div class="col-md-8">
-        <div class="" id="lima">
+        <div class="divmapa" id="lima">
           <img src="images/offices/lima.jpg" width="100%" alt="lima">
         </div>
         <div class=""> </div>

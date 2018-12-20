@@ -11,6 +11,7 @@ h1 {
   padding-left: 20px;
   padding-bottom: 20px;
   padding-top: 10px;
+  padding-right: 15px;
   background-color: #f5f5f5;
   border-radius: 10px;
 }
@@ -23,4 +24,16 @@ h1 {
 
 div .sedes:hover {
   background-color: #d9cdc9;
+}
+
+.sedes a {
+  color: black;
+}
+
+.sedes a:hover {
+  text-decoration: none;
+}
+
+.divmapa img {
+  border-radius: 10px;
 }
