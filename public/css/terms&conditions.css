@@ -1,0 +1,10 @@
+.container-fluid {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.text {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: grey;
+}
