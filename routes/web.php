@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', 'PagesController@home');
+Route::get('/', 'PagesController@home');
 
 Route::get('/aboutus', 'PagesController@aboutUs');
 
@@ -66,3 +62,7 @@ Route::get('/tv', 'PagesController@catTv');
 Route::get('/offices', 'PagesController@offices');
 
 Route::get('/addCart/{id}','ProductsController@addCart');
+
+Auth::routes();
+
+Route::get('/home', 'PagesController@home')->name('home');
