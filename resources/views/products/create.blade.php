@@ -139,8 +139,13 @@
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-success">Save product</button>
+		<button type="submit" class="btn btn-success">Crear Producto</button>
+		<a href="/home"><button class="btn btn-danger cancel-button" type="">Cancelar</button></a>
+
+
+
 	</form>
+
   <br>
 
 	<script>

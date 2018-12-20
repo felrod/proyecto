@@ -3,10 +3,11 @@
 @section('title', 'Editan un producto')
 
 @section('content')
+	<br>
 	<h2>Editando: {{ $product->name }}</h2>
-	<img src="{{ Storage::url('products/' . $product->image) }}" width="200">
+	<img src="{{ Storage::url('products/' . $product->img	) }}" width="200">
 
-	<form action="{{ route('products.update', $product->id) }}" method="post" enctype="multipart/form-data">
+	<form action="/products/{{ $product->id }}" method="post" enctype="multipart/form-data">
 		@csrf
 		{{ method_field('PUT') }}
 		<div class="row">
@@ -100,7 +101,7 @@
 
 		<button type="submit" class="btn btn-success">Save product</button>
 	</form>
-
+	<br>
 	<script>
 		let campoName = document.querySelector('#name');
 		campoName.addEventListener('blur', function () {

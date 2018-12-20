@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home(){
-      $products = \App\Product::paginate(8);
-      return view('home')->with(compact('products'));
+      $hot = \App\Product::where('status_id','=','2')->orderBy('created_at','desc')->limit(4)->get();
+      $new = \App\Product::where('status_id','=','3')->orderBy('created_at','desc')->limit(4)->get();
+      $off = \App\Product::where('status_id','=','4')->orderBy('created_at','desc')->limit(4)->get();
+      return view('home')->with(compact('hot','new','off'));
     }
 
     public function aboutus(){

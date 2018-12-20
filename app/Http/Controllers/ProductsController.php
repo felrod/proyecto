@@ -4,10 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Category;
+use App\Brand;
+use App\Status;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductRequest;
+use Illuminate\Support\Facades\Auth;
+use Cookie;
 use Session;
 
 class ProductsController extends Controller
 {
+
+    public function __construct()
+    {
+      if (Auth::check()) {
+
+        $this->middleware('auth');
+
+      } else {
+
+      }
+    }
 
     public function storeAndUpdate($request, $product)
     {
@@ -85,7 +104,7 @@ class ProductsController extends Controller
 
 		$this->storeAndUpdate($request, $product);
 
-		return redirect('/products');
+		return redirect('/products.index');
 	}
 
 	/**
@@ -110,9 +129,9 @@ class ProductsController extends Controller
 	public function edit($id)
 	{
 		$product = Product::find($id);
-		$brands = \App\Brand::all();
-		$categories = \App\Category::all();
-    $status = \App\Status::all();
+		$brands = Brand::all();
+		$categories = Category::all();
+    $status = Status::all();
 
 		return view('products.edit')->with(compact('product', 'brands', 'categories','status'));
 	}
@@ -128,9 +147,9 @@ class ProductsController extends Controller
 	{
 		$product = Product::find($id);
 
-		$this->storeAndUpdate($request, $product);
+	$this->storeAndUpdate($request, $product);
 
-		return redirect()->route('products.index');
+		return redirect()->route('products.show/'.$product->id);
 	}
 
 	/**
@@ -154,12 +173,22 @@ class ProductsController extends Controller
 
   public function addCart(Request $request, $id)
   {
-    $product = Product::find($id);
-    $oldCart = Session::has('cart')?Session::get('cart'):null;
-    $cart = new Cart($oldCart);
-    $cart->add($product,$product->id);
-    $request->session()->put('cart',$cart);
-    return redirect()->route('product.index');
+    // $product = Product::find($id);
+    // $oldCart = Session::has('cart')?Session::get('cart'):null;
+    // $cart = new Cart($oldCart);
+    // $cart->add($product,$product->id);
+    // $request->session()->put('cart',$cart);
+    // return redirect()->route('product.index');
+
+    $products=[];
+     if (isset($_COOKIE['carrito'])) {
+       $cookie=   json_decode($_COOKIE['carrito']);
+       foreach ($cookie->productos as $key=>$value) {
+        // var_dump($value);
+        array_push($products, Product::find($value));
+      }
+     }
+     return view('cart')->with(compact('products'));
   }
 
 }

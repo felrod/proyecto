@@ -19,7 +19,7 @@
             <div class="perfilusuario">
                 <div class="row">
                     <div class="col-md-8">
-                      ¡Bienvenido <?php // echo $user->getName();?>!
+                      ¡Bienvenido {{Auth::user()->name}}!
                       <br>
                       <a href= "editarperfil.php">Editar Perfil</a>
                     </div>
