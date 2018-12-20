@@ -29,7 +29,7 @@ Route::get('/offers', 'PagesController@offers');
 
 Route::get('/hotsales', 'PagesController@hotSales');
 
-Route::get('/terms&conds', 'PagesController@termsConditions');
+Route::get('/terms&conditions', 'PagesController@termsConditions');
 
 Route::get('/faq', 'PagesController@faq');
 

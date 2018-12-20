@@ -114,7 +114,7 @@
 
 								<br><br>
                 <div class="">
-								<label><input id="check" type="checkbox"> Acepto los <a href= "terminosycondiciones.php">términos y condiciones</a>.</label>
+								<label><input id="check" type="checkbox"> Acepto los <a href= "/terms&conditions">términos y condiciones</a>.</label>
                 </div>
 								<br><br>
 
