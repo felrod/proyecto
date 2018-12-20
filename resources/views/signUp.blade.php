@@ -46,8 +46,8 @@
 
 						<br><br>
 
-						<form action="signup.php" class="user-form" method="POST" enctype="multipart/form-data">
-
+						<!-- <form action="signup.php" class="user-form" method="POST" enctype="multipart/form-data"> -->
+            <form action="signup.php" class="user-form" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="username">Nombre de usuario</label>
 							<input type="text" value="<?php // echo $usernameDefault?>" class="form-control" name="username">
