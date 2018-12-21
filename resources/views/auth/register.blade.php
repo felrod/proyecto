@@ -9,7 +9,7 @@
 
 <br><br><br>
 
-<div class="container">
+<section class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -17,25 +17,24 @@
 
                 <div class="card-body">
                     <form method="POST" class="user-form" action="{{ route('register') }}">
+
+
                         @csrf
+
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
-
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                <div class="invalid-feedback2"></div>
-
+                                <div class="invalid-feedback"></div>
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
-
-
                             </div>
                         </div>
+
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
@@ -114,7 +113,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <br><br>
 

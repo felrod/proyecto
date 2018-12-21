@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
   // funciones de campos vacios, e email
 
   function emptyValidate () {
-    var error = this.parentElement.querySelector('.invalid-feedback2');
+    var error = this.parentElement.querySelector('.invalid-feedback');
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
   }
 
   function emptyUsernameValidate () {
-    var error = this.parentElement.querySelector('.invalid-feedback2');
+    var error = this.parentElement.querySelector('.invalid-feedback');
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
@@ -45,7 +45,7 @@ window.addEventListener('load', function () {
   }
 
   function emptyNameValidate () {
-    var error = this.parentElement.querySelector('.invalid-feedback2');
+    var error = this.parentElement.querySelector('.invalid-feedback');
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
@@ -57,7 +57,7 @@ window.addEventListener('load', function () {
   }
 
   function emptyAndEmailValidate () {
-    var error = this.parentElement.querySelector('.invalid-feedback2');
+    var error = this.parentElement.querySelector('.invalid-feedback');
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
@@ -91,7 +91,7 @@ window.addEventListener('load', function () {
 //contraseñas:
 
   fieldPassword.addEventListener('blur', function () {
-    var error = this.parentElement.querySelector('.invalid-feedback2');
+    var error = this.parentElement.querySelector('.invalid-feedback');
     var nameField = this.parentElement.querySelector('label').innerText;
     if (this.value.trim() === '') {
       this.classList.add('is-invalid');
@@ -106,7 +106,7 @@ window.addEventListener('load', function () {
   });
 
   fieldRepPassword.addEventListener('change', function () {
-    var error = this.parentElement.querySelector('.invalid-feedback2');
+    var error = this.parentElement.querySelector('.invalid-feedback');
     if (this.value.trim() !== fieldPassword.value.trim()) {
       this.classList.add('is-invalid');
       error.innerText = 'Las contraseñas no coinciden';
@@ -127,7 +127,7 @@ window.addEventListener('load', function () {
       fieldCountry.value.trim() === ''
     ) {
       fields.forEach(function (field) {
-        var error = field.parentElement.querySelector('.invalid-feedback2');
+        var error = field.parentElement.querySelector('.invalid-feedback');
         var nameField = field.parentElement.querySelector('label').innerText;
         if (field.value.trim() === '') {
           field.classList.add('is-invalid');
@@ -136,11 +136,11 @@ window.addEventListener('load', function () {
       });
     } else if (fieldRepPassword.value !== fieldPassword.value) {
       fieldRepPassword.classList.add('is-invalid');
-      fieldRepPassword.parentElement.querySelector('.invalid-feedback2').innerText = 'Las contraseñas no coinciden';
+      fieldRepPassword.parentElement.querySelector('.invalid-feedback').innerText = 'Las contraseñas no coinciden';
     } else {
       fields.forEach(function (field) {
         finalData[field.name] = field.value;
-        var error = field.parentElement.querySelector('.invalid-feedback2');
+        var error = field.parentElement.querySelector('.invalid-feedback');
         field.classList.remove('is-invalid');
         field.value = '';
         error.innerText = '';
