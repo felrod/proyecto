@@ -41,7 +41,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/login">Log In</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/signup">Sign Up</a>
+              <a class="dropdown-item" href="/register">Sign Up</a>
             @else
               @if (Auth::user()->admin)
               <a class="dropdown-item" href="/products/create">Crear producto</a>
