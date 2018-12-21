@@ -119,7 +119,7 @@
 								<br><br>
 
 							<div class="row justify-content-center">
-								<button type="submit" id= "submit" class="btn btn-primary btn-lg">Registrarse</button>
+								<button type="submit" id= "submit" class="btn btn-danger">Registrarse</button>
 								<br>
 							</div>
 						</form>

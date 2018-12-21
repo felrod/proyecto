@@ -27,7 +27,7 @@
             <br><br> -->
             <br>
             <div class="row justify-content-center">
-              <button type="submit" class="btn btn-primary btn-lg">Iniciar Sesión</button>
+              <button type="submit" class="btn btn-danger">Iniciar Sesión</button>
 
             </div>
           </form>

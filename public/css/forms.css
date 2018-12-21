@@ -4,13 +4,14 @@
 }
 
 .btn {
-  border-radius: 15px;
+  border-radius: 12px;
 }
 
 .btn:hover {
   background-color: #AB432C;
   border-color: #B84229;
 }
+
 .auth-form-body {
   padding: 20px;
   background-color: #f5f5f5;

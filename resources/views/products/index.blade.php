@@ -4,12 +4,17 @@
 @endsection
 
 @section('content')
-    <!-- Contenido-->
-    <br>
-    <a href="/products?orderBy=categories">Category</a>
-    <a href="/products?orderBy=brands">Brand</a>
-    <a href="/products?orderBy=status">Status</a>
-    <a href="/products">Price</a>
+    <div class="main row">
+      <div class="col-md-3 filtrar">
+        <h3>Filtrar por:</h3>
+      </div>
+      <div class="col-md-9 filtrar">
+        <a href="/products?orderBy=categories"><button type="button" name="button" class="btn btn-primary bott">Category</button></a>
+        <a href="/products?orderBy=brands"><button type="button" name="button" class="btn btn-info bott">Brands</button></a>
+        <a href="/products?orderBy=status"><button type="button" name="button" class="btn btn-warning bott">Status</button></a>
+        <a href="/products"><button type="button" name="button" class="btn btn-success bott">Price</button></a>
+      </div>
+    </div>
     <br>
     <div class="container">
       <!-- Page Features -->
@@ -30,8 +35,8 @@
               <p class="card-text">{{ $oneProduct->name }}</p>
             </div>
             <div class="card-footer">
-              {{-- <a href="{{route('/addCart',$oneProduct->id)}}" class="btn btn-primary">Comprar</a> --}}
-              <a href="{{ route('products.show',$oneProduct->id)}}" class="btn btn-primary">Detalles</a>
+              {{-- <a href="{{route('/addCart',$oneProduct->id)}}" class="btn btn-success">Comprar</a> --}}
+              <a href="{{ route('products.show',$oneProduct->id)}}" class="btn btn-danger">Detalles</a>
             </div>
           </div>
         </div>

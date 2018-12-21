@@ -29,7 +29,7 @@
            </div>
            <div class="card-footer">
              {{-- <a href="#" class="btn btn-primary">Comprar</a> --}}
-             <a href="{{ route('products.show',$oneProduct->id)}}" class="btn btn-primary">Detalles</a>
+             <a href="{{ route('products.show',$oneProduct->id)}}" class="btn btn-danger">Detalles</a>
            </div>
          </div>
        </div>

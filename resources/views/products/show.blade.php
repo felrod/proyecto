@@ -30,10 +30,10 @@
        <div class="col-md-12  ">
         <h2 class="product-price">${{ $product->price }}</h2>
         <br>
-        <a href="#"><button type="button" class="btn btn-primary">Agregar a Carrito</button></a>
+        <a href="#"><button type="button" class="btn btn-success">Agregar a Carrito</button></a>
         @guest
 
-          <a href="{{ URL::previous() }}" class="btn btn-primary" style="width: 78px;">Volver</a>
+          <a href="{{ URL::previous() }}" class="btn btn-secondary" style="width: 78px;">Volver</a>
 
           	@else
 

@@ -17,3 +17,13 @@ font-style: "italic";
 .dark-theme {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.filtrar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.bott {
+  margin-right: 30px;
+
+}
