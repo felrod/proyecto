@@ -233,7 +233,7 @@ class ProductsController extends Controller
       $oldcart = Session::get('cart');
       $cart = new Cart($oldcart);
       $cart = "";
-      return redirect('products');
+      return redirect('/products');
 
   }
 
