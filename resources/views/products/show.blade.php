@@ -1,6 +1,8 @@
 @extends('template.base')
 
 @section('title')
+Detalle
+@endsection
 
 @section('content')
   <div class="">

@@ -63,7 +63,7 @@
 
                     </td>
                     <td>
-                    <a href="{{url('checkout')}}" class="btn btn-primary">
+                    <a href="{{url('checkout')}}" class="btn btn-primary" id='check'>
                       Checkout  </a></td>
                 </tr>
             </tfoot>
@@ -76,4 +76,7 @@
     </div>
      @endif
     </div>
+@endsection
+@section('custom-js')
+<script src={{ asset('/js/details.js')}} ></script>
 @endsection
