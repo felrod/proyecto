@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Product;
 
 class PagesController extends Controller
 {
@@ -19,10 +20,6 @@ class PagesController extends Controller
 
     public function contacts(){
       return view('contacts');
-    }
-
-    public function cart(){
-      return view('cart');
     }
 
     public function profile(){

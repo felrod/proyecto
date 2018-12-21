@@ -13,6 +13,7 @@ use App\Http\Requests\ProductRequest;
 use Illuminate\Support\Facades\Auth;
 use Cookie;
 use Session;
+use App\Cart;
 
 class ProductsController extends Controller
 {
@@ -149,7 +150,7 @@ class ProductsController extends Controller
 
 	$this->storeAndUpdate($request, $product);
 
-		return redirect()->route('products.index');
+		return redirect()->route('products');
 	}
 
 	/**
@@ -171,24 +172,68 @@ class ProductsController extends Controller
 		return $products;
 	}
 
-  public function addCart(Request $request, $id)
-  {
-    // $product = Product::find($id);
-    // $oldCart = Session::has('cart')?Session::get('cart'):null;
-    // $cart = new Cart($oldCart);
-    // $cart->add($product,$product->id);
-    // $request->session()->put('cart',$cart);
-    // return redirect()->route('product.index');
+  // public function addCart()
+  // {
+  //   // $product = Product::find($id);
+  //   // $oldCart = Session::has('cart')?Session::get('cart'):null;
+  //   // $cart = new Cart($oldCart);
+  //   // $cart->add($product,$product->id);
+  //   // $request->session()->put('cart',$cart);
+  //   // return redirect()->route('product.index');
+  //
+  //   $products=[];
+  //    if (isset($_COOKIE['carrito'])) {
+  //      $cookie=   json_decode($_COOKIE['carrito']);
+  //      foreach ($cookie->productos as $key=>$value) {
+  //       // var_dump($value);
+  //       array_push($products, Product::find($value));
+  //     }
+  //    }
+  //    return view('cart')->with(compact('products'));
+  // }
 
-    $products=[];
-     if (isset($_COOKIE['carrito'])) {
-       $cookie=   json_decode($_COOKIE['carrito']);
-       foreach ($cookie->productos as $key=>$value) {
-        // var_dump($value);
-        array_push($products, Product::find($value));
+  public function addToCart(Request $req ,$id){
+     $product = Product::find($id);
+    $oldcart = Session::has('cart') ? Session::get('cart') : null;
+      $cart = new Cart($oldcart);
+      $cart->add($product, $product->id);
+
+      $req->session()->put('cart',$cart);
+
+
+      return redirect('products');
+ }
+
+  public function removefromcart(Request $req, $id)
+  {       $product = Product::find($id);
+    $oldcart = Session::has('cart') ? Session::get('cart') : null;
+      $cart = new Cart($oldcart);
+      unset($cart->items[$id]);
+
+   $cart->remove($product, $product->id);
+       Session::put('cart', $cart);
+       return back();
+  }
+  public function Cart(){
+    $product = Product::all();
+      if(!Session::has('cart') ){
+          return view('shoppingCart')->with(compact('product'));
+
       }
-     }
-     return view('cart')->with(compact('products'));
+       $oldcart = Session::get('cart');
+        $cart = new Cart($oldcart);
+       return view('shoppingCart',['products'=> $cart->items, 'totalPrice'=>  $cart->totalPrice]);
+  }
+
+  public function checkout(){
+        if(!Session::has('cart') ){
+          return view('shoppingCart');
+      }
+      $oldcart = Session::get('cart');
+      $cart = 0;
+      $totalPrice = 0;
+      return view('login');
+
   }
 
 }

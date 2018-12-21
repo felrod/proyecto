@@ -30,7 +30,10 @@
        <div class="col-md-12  ">
         <h2 class="product-price">${{ $product->price }}</h2>
         <br>
-        <a href="#"><button type="button" class="btn btn-success">Agregar a Carrito</button></a>
+        {{-- <a class="buttonCarrito" data-id="{{ $product->id}}" data-name="{{ $product->name}}" href="/cart"> --}}
+        <a href="{{route('addtocart' ,['id' => $product->id])}}">
+
+          <button type="button" class="btn btn-success">Agregar a Carrito</button></a>
         @guest
 
           <a href="{{ URL::previous() }}" class="btn btn-secondary" style="width: 78px;">Volver</a>

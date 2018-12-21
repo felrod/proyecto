@@ -17,7 +17,7 @@ Route::get('/aboutus', 'PagesController@aboutUs');
 
 Route::get('/contacts', 'PagesController@contacts');
 
-Route::get('/cart', 'PagesController@cart');
+// Route::get('/cart', 'ProductsController@addCart');
 
 Route::get('/profile', 'PagesController@profile');
 
@@ -39,7 +39,19 @@ Route::get('/login', 'PagesController@login');
 
 Route::get('/signup', 'PagesController@signUp');
 
-Route::resource('/products', 'ProductsController');
+route::middleware('auth')->group(function()
+{
+Route::get('/products/create','ProductsController@create')->name('products.create');
+
+Route::delete('/products/{id}','ProductsController@destroy')->name('products.destroy');
+
+Route::get('/products/{id}/edit','ProductsController@edit')->name('products.edit');
+});
+
+Route::resource('/products', 'ProductsController')->except(['create','destroy','edit']);
+
+// Route::resource('/products', 'ProductsController');
+
 
 Route::get('/cel', 'PagesController@catCelulares');
 
@@ -61,8 +73,36 @@ Route::get('/tv', 'PagesController@catTv');
 
 Route::get('/offices', 'PagesController@offices');
 
-Route::get('/addCart/{id}','ProductsController@addCart');
+// Route::get('/addCart/{id}','ProductsController@addCart');
 
 Auth::routes();
 
 Route::get('/home', 'PagesController@home')->name('home');
+
+
+Route::get('/add-to-cart/{id}',[
+
+'uses' => 'ProductsController@addToCart',
+'as' => 'addtocart'
+
+]);
+
+Route::get('/remove-from-cart/{id}',[
+
+'uses' => 'ProductsController@removefromcart',
+'as' => 'removefromcart'
+
+]);
+Route::get('shoppingCart',[
+
+'uses' => 'ProductsController@Cart',
+'as' => 'shoppingCart'
+
+]);
+
+Route::get('checkout',[
+
+'uses' => 'ProductsController@checkout',
+'as' => 'checkout',
+ 'middleware' =>'auth'
+]);

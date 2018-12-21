@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light" style='background-color: #c84c4e;'>
-  <a class="navbar-brand" href="home"><img class="logo" src="/images/dh-logo.png" alt="logo" width="75px"></a>
+  <a class="navbar-brand" href="/"><img class="logo" src="/images/dh-logo.png" alt="logo" width="75px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -60,7 +60,7 @@
         </ul>
       </div>
       <div class="cart">
-        <a href="/cart"><img src="/images/icon-cart.png" alt="cart" width="35px"></a>
+        <a href="/shoppingCart"><img src="/images/icon-cart.png" alt="cart" width="35px"></a>
       </div>
   </div>
 </nav>
