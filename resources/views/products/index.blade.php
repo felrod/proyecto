@@ -1,6 +1,7 @@
 @extends('template.base')
 
 @section('title')
+Productos
 @endsection
 
 @section('content')

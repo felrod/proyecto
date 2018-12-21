@@ -1,6 +1,7 @@
 @extends('template.base')
 
 @section('title')
+Mi Perfil
 @endsection
 
 @section('content')
@@ -35,7 +36,7 @@
                   <a href= "">Notificaciones</a>
                 </div>
                 <div class="opcion">
-                  <a href= "">Mis Ordenes</a>
+                  <a href= ""  id='changeProducts'>Mis Productos</a>
                 </div>
                 <div class="opcion">
                   <a href= "">Wish List</a>
@@ -50,8 +51,9 @@
             </div>
         </div>
         <div class="col-md-9">
-          <div class="col-md-12">
+          <div class="col-md-12" id='divnotif'>
               Notificaciones
+
           </div>
         </div>
       </div>

@@ -4,7 +4,6 @@
 
 
 @section('content')
-<br>
 <section class="container">
 <div class="index-home">
 

@@ -1,6 +1,8 @@
 @extends('template.base')
 
 @section('title')
+TV
+@endsection
 
 @section('content')
   {{-- @foreach ($products as $product)

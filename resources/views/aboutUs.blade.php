@@ -1,6 +1,7 @@
 @extends('template.base')
 
 @section('title')
+Nosotros
 @endsection
 
 @section('content')

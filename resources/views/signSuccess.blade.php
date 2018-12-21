@@ -1,6 +1,7 @@
 @extends('template.base')
 
 @section('title')
+Registro Exitoso
 @endsection
 
 @section('content')

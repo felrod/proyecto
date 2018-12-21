@@ -1,6 +1,6 @@
 @extends('template.base')
 
-@section('title', 'Editan un producto')
+@section('title', 'Editar producto')
 
 @section('content')
 	<br>
