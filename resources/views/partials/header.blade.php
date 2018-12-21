@@ -56,7 +56,7 @@
             @endif
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="changeBG" href="#">Dark Theme</a>
-              <a class="dropdown-item" href="/profile?username=">Mi perfil</a>
+              {{-- <a class="dropdown-item" href="/profile?username=">Mi perfil</a> --}}
               {{-- <a class="dropdown-item" href="/settings">Configuraciones</a> --}}
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/logout" onclick="event.preventDefault();

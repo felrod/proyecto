@@ -63,7 +63,7 @@
 
                     </td>
                     <td>
-                    <a href="{{url('checkout')}}" class="btn btn-primary" id='checkout'>
+                    <a href="{{url('checkout')}}" class="btn btn-primary" id='checking'>
                       Checkout  </a></td>
                 </tr>
             </tfoot>
