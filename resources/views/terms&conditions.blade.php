@@ -1,6 +1,7 @@
 @extends('template.base')
 
 @section('title')
+Términos y Condiciones
 @endsection
 
 @section('content')

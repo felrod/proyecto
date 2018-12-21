@@ -1,6 +1,7 @@
 @extends('template.base')
 
 @section('title')
+Editar Perfil
 @endsection
 
 @section('content')

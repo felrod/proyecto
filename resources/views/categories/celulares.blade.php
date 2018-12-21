@@ -1,7 +1,8 @@
 @extends('template.base')
 
 @section('title')
-
+Celulares
+@endsection
 @section('content')
   {{-- @foreach ($products as $product)
     <li>{{ $product->name }} -- {{ $product->status->name }}</li>

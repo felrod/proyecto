@@ -1,6 +1,7 @@
 @extends('template.base')
 
 @section('title')
+Iniciar Sesión
 @endsection
 
 @section('content')
