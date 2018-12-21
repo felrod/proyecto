@@ -217,7 +217,7 @@ class ProductsController extends Controller
   public function Cart(){
     $product = Product::all();
       if(!Session::has('cart') ){
-          return view('shoppingCart')->with(compact('product'));
+          return view('shoppingCart');
 
       }
        $oldcart = Session::get('cart');
@@ -226,14 +226,22 @@ class ProductsController extends Controller
   }
 
   public function checkout(){
+        $product = Product::all();
         if(!Session::has('cart') ){
           return view('shoppingCart');
       }
       $oldcart = Session::get('cart');
-      $cart = 0;
-      $totalPrice = 0;
-      return view('login');
+      $cart = new Cart($oldcart);
+      $cart = "";
+      return redirect('products');
 
+  }
+
+  public function findProduct(Request $request){
+
+    $find = $request->input('search');
+    $prodructsFind = Product::where('name', 'like', '%'. $find .'%')->paginate(10);
+    return view('products.listFindProduct')->with(compact('prodructsFind','find'));
   }
 
 }
