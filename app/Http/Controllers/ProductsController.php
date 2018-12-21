@@ -230,9 +230,7 @@ class ProductsController extends Controller
         if(!Session::has('cart') ){
           return view('shoppingCart');
       }
-      $oldcart = Session::get('cart');
-      $cart = new Cart($oldcart);
-      $cart = "";
+      Session::forget('cart');
       return redirect('/products');
 
   }
@@ -241,7 +239,7 @@ class ProductsController extends Controller
 
     $find = $request->input('search');
     $prodructsFind = Product::where('name', 'like', '%'. $find .'%')->paginate(10);
-    return view('products.listFindProduct')->with(compact('prodructsFind','find'));
+    return view('products.search')->with(compact('productsFind','find'));
   }
 
 }

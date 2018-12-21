@@ -22,7 +22,7 @@ Mi Perfil
                     <div class="col-md-8">
                       ¡Bienvenido {{Auth::user()->name}}!
                       <br>
-                      <a href= "editarperfil.php">Editar Perfil</a>
+                      <a href= "/editarperfil">Editar Perfil</a>
                     </div>
                     <div class="col-md-4">
                         <div class="imagenperfil" style="background-image: url('avatars/<?php // echo $user->getAvatar() ?>')"></div>

@@ -28,19 +28,12 @@
     </ul>
     <form class="form-inline my-2 my-md-0">
       {{-- @csrf --}}
-      <input class="form-control" action="{{route('product.finder')}}" type="search" placeholder="¿Qué Buscas?" aria-label="Search" style='border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;'>
+      <input class="form-control" name="search" action="{{route('product.finder')}}" method="get" type="search" placeholder="¿Qué Buscas?" aria-label="Search" style='border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;'>
       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" style='border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;'><img src="/images/icon-search.jpg" alt="iconSearch" width="20px"></button>
     </form>
 
 
-    <!-- <form class="form-busqueda" action="{{route('product.finder')}}" method="get">
-        {{-- @csrf --}}
-        <input class="input-busqueda" type="text" name="search" value="" placeholder="¿Qué necesitas?" autofocus>
-        <button class="boton-lupa" type="submit" name="">
-        <img class="lupa" src="/images/lupa.png" alt="">
-        </button>
 
-      </form> -->
 
 
 
@@ -49,7 +42,7 @@
     <div class="class="d-flex justify-content-end"">
       <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="myDropDown" data-toggle="dropdown">Mi Cuenta <img src=@guest "/images/default-profile.jpg" @else "{{ auth::user()->img}}" @endguest width="35px"></a>
+          <a class="nav-link dropdown-toggle" href="#" id="myDropDown" data-toggle="dropdown">Mi Cuenta <img src=@guest "/images/default-profile.jpg" @else "/storage/users/{{ auth::user()->img}}" @endguest width="35px"></a>
           <div class="dropdown-menu" aria-labelledby="myDropDown">
             @guest
               <a class="dropdown-item" id="changeBG" href="#">Dark Theme</a>
@@ -64,7 +57,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="changeBG" href="#">Dark Theme</a>
               <a class="dropdown-item" href="/profile?username=">Mi perfil</a>
-              <a class="dropdown-item" href="/settings">Configuraciones</a>
+              {{-- <a class="dropdown-item" href="/settings">Configuraciones</a> --}}
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/logout" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">Log Out</a><form id="logout-form" action="/logout" method="POST" style="display: none;">
