@@ -39,16 +39,27 @@ Route::get('/login', 'PagesController@login');
 
 Route::get('/signup', 'PagesController@signUp');
 
-route::middleware('auth')->group(function()
-{
-Route::get('/products/create','ProductsController@create')->name('products.create');
+// route::middleware('auth')->group(function()
+// {
+// Route::get('/products/create','ProductsController@create')->name('products.create');
+// Route::post('/products/create','ProductsController@store')->name('products.store');
+//
+// Route::delete('/products/{id}','ProductsController@destroy')->name('products.destroy');
+//
+// Route::get('/products/{id}/edit','ProductsController@edit')->name('products.edit');
+// });
 
-Route::delete('/products/{id}','ProductsController@destroy')->name('products.destroy');
 
-Route::get('/products/{id}/edit','ProductsController@edit')->name('products.edit');
-});
+Route::get('/products', 'ProductsController@index');
+Route::post('/products', 'ProductsController@store')->name('products.store');
+Route::get('/products/create', 'ProductsController@create')->name('products.create');
+Route::get('/products/{id}', 'ProductsController@show')->name('products.show');
+Route::put('/products/{id}', 'ProductsController@update')->name('products.update');
+Route::delete('/products/{id}', 'ProductsController@destroy')->name('products.destroy');
+Route::get('/products/{id}/edit', 'ProductsController@edit')->name('products.edit');
 
-Route::resource('/products', 'ProductsController')->except(['create','destroy','edit']);
+
+// Route::resource('/products', 'ProductsController')->except(['create','destroy','edit']);
 
 // Route::resource('/products', 'ProductsController');
 

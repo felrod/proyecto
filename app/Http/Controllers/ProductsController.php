@@ -102,7 +102,7 @@ class ProductsController extends Controller
 	public function store(ProductRequest $request)
 	{
 		$product = new Product;
-
+    dd("hola");
 		$this->storeAndUpdate($request, $product);
 
 		return redirect('/products');
