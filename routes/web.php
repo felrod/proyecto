@@ -79,6 +79,8 @@ Auth::routes();
 
 Route::get('/home', 'PagesController@home')->name('home');
 
+Route::match(['get', 'post'], '/findProduct', 'productsController@findProduct')->name('product.finder');
+
 
 Route::get('/add-to-cart/{id}',[
 
